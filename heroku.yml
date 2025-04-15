@@ -1,0 +1,18 @@
+setup:
+  # Optional: Define addons or config vars needed BEFORE build/run
+  # addons:
+  #   - plan: heroku-redis
+  # config:
+  #   SOME_CONFIG_VAR: some_value
+
+build:
+  docker:
+    # Tells Heroku to use the Dockerfile in the root directory
+    # to build the image for the 'web' process type.
+    web: Dockerfile
+    # If you had other process types (e.g., worker), define their Dockerfiles too:
+    # worker: Dockerfile.worker
+  # You can specify build-time config vars if needed, though often
+  # ARG defaults in the Dockerfile or runtime vars are sufficient.
+  # config:
+  #   INSTALL_TYPE: all # Example build-time var
